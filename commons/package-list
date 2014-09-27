@@ -1,12 +1,10 @@
 blue.lapis.common
 blue.lapis.common.command
-blue.lapis.common.command.impl
 blue.lapis.common.command.token
 blue.lapis.common.config
 blue.lapis.common.config.serializer
 blue.lapis.common.config.storage
 blue.lapis.common.economy
 blue.lapis.common.economy.event
-blue.lapis.common.economy.event.impl
 blue.lapis.common.economy.formatter
 blue.lapis.common.permission
