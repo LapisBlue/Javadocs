@@ -3,21 +3,24 @@
 # args:
 # ./generate <name> <command> <dir>
 # e.g
-# ./generate remapper "./gradlew javadoc" ../build/docs/javadoc
+# ./generate remapper "./gradlew javadoc" build/docs/javadoc
 
 name=$1
 command=$2
+root_dir=$(pwd)
 dir=$3
-echo "Running command..."
-${command} && {
-    echo "Finished running command."
-    echo "Deploying..."
-    git config user.name "Lapislazuli"
+
+echo "Starting Javadoc build..."
+$command && {
+	cd $(dirname $0)
+	echo "Deploying..."
+	git config user.name "Lapislazuli"
     git config user.email "lapislazuli@lapis.blue"
-    git rm -r ${name}
-    cp -r ${dir} ${name}
+    git rm -r $name
+    cp -r $root_dir/$dir $name
     git add -A
     git commit -m "Update to $TRAVIS_REPO_SLUG@$TRAVIS_COMMIT (Build $TRAVIS_BUILD_NUMBER)"
-    git push origin gh-pages
-    echo "Finished deploying."
+    git push origin gh-pages && echo "Successfully deployed Javadocs to the repository."
+} || {
+	echo "Unable to generate Javadocs. Please try again later."
 }
