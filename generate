@@ -20,7 +20,7 @@ $command && {
 	cp -r $root_dir/$dir $name
 	git add -A
 	git commit -m "Update to $TRAVIS_REPO_SLUG@$TRAVIS_COMMIT (Build $TRAVIS_BUILD_NUMBER)"
-	git push origin gh-pages && echo "Successfully deployed Javadocs to the repository."
+	git push -q --progress origin gh-pages && echo "Successfully deployed Javadocs to the repository."
 } || {
 	echo "Unable to generate Javadocs. Please try again later."
 }
