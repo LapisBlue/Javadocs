@@ -99,12 +99,12 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Superinterfaces:</dt>
-<dd>org.spongepowered.api.event.Cancellable, <a href="../../../../../blue/lapis/common/economy/event/EconomyEvent.html" title="interface in blue.lapis.common.economy.event">EconomyEvent</a>, org.spongepowered.api.event.Event</dd>
+<dd>org.spongepowered.api.util.event.Cancellable, <a href="../../../../../blue/lapis/common/economy/event/EconomyEvent.html" title="interface in blue.lapis.common.economy.event">EconomyEvent</a>, org.spongepowered.api.util.event.Event</dd>
 </dl>
 <hr>
 <br>
 <pre>public interface <span class="typeNameLabel">TransactionEvent</span>
-extends <a href="../../../../../blue/lapis/common/economy/event/EconomyEvent.html" title="interface in blue.lapis.common.economy.event">EconomyEvent</a>, org.spongepowered.api.event.Cancellable</pre>
+extends <a href="../../../../../blue/lapis/common/economy/event/EconomyEvent.html" title="interface in blue.lapis.common.economy.event">EconomyEvent</a>, org.spongepowered.api.util.event.Cancellable</pre>
 <div class="block">Signals that a <a href="../../../../../blue/lapis/common/economy/Transaction.html" title="class in blue.lapis.common.economy"><code>Transaction</code></a> is about to complete, and offers a chance to change its details before it
  is applied.</div>
 </li>
@@ -138,17 +138,17 @@ extends <a href="../../../../../blue/lapis/common/economy/event/EconomyEvent.htm
 <code><a href="../../../../../blue/lapis/common/economy/event/EconomyEvent.html#getAccount--">getAccount</a></code></li>
 </ul>
 <ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.org.spongepowered.api.event.Event">
+<li class="blockList"><a name="methods.inherited.from.class.org.spongepowered.api.util.event.Event">
 <!--   -->
 </a>
-<h3>Methods inherited from interface&nbsp;org.spongepowered.api.event.Event</h3>
-<code>getResult, isCancellable, setResult</code></li>
+<h3>Methods inherited from interface&nbsp;org.spongepowered.api.util.event.Event</h3>
+<code>getCallbacks</code></li>
 </ul>
 <ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.org.spongepowered.api.event.Cancellable">
+<li class="blockList"><a name="methods.inherited.from.class.org.spongepowered.api.util.event.Cancellable">
 <!--   -->
 </a>
-<h3>Methods inherited from interface&nbsp;org.spongepowered.api.event.Cancellable</h3>
+<h3>Methods inherited from interface&nbsp;org.spongepowered.api.util.event.Cancellable</h3>
 <code>isCancelled, setCancelled</code></li>
 </ul>
 </li>
@@ -171,8 +171,7 @@ extends <a href="../../../../../blue/lapis/common/economy/event/EconomyEvent.htm
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getTransaction</h4>
-<pre>@Nonnull
-<a href="../../../../../blue/lapis/common/economy/Transaction.html" title="class in blue.lapis.common.economy">Transaction</a>&nbsp;getTransaction()</pre>
+<pre><a href="../../../../../blue/lapis/common/economy/Transaction.html" title="class in blue.lapis.common.economy">Transaction</a>&nbsp;getTransaction()</pre>
 </li>
 </ul>
 </li>
